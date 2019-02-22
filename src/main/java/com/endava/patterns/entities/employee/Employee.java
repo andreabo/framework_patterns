@@ -1,7 +1,11 @@
-package com.endava.patterns.entities;
+package com.endava.patterns.entities.employee;
 
+import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
+@NoArgsConstructor
+@AllArgsConstructor
 @Data
 public class Employee {
     private int id;

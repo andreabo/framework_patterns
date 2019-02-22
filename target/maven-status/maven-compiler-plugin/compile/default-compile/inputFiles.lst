@@ -1,5 +1,7 @@
-C:\Users\sforero\Desktop\framework_patterns\src\main\java\com\endava\patterns\entities\Employee.java
-C:\Users\sforero\Desktop\framework_patterns\src\main\java\com\endava\patterns\utils\Strings.java
+C:\Users\sforero\Desktop\framework_patterns\src\main\java\com\endava\patterns\entities\factory\EmployeeFactory.java
+C:\Users\sforero\Desktop\framework_patterns\src\main\java\com\endava\patterns\entities\employee\EmployeeBuilder.java
 C:\Users\sforero\Desktop\framework_patterns\src\main\java\com\endava\patterns\utils\HttpRequest.java
 C:\Users\sforero\Desktop\framework_patterns\src\main\java\com\endava\patterns\mapper\EmployeeMapper.java
+C:\Users\sforero\Desktop\framework_patterns\src\main\java\com\endava\patterns\entities\employee\Employee.java
 C:\Users\sforero\Desktop\framework_patterns\src\main\java\com\endava\patterns\utils\Session.java
+C:\Users\sforero\Desktop\framework_patterns\src\main\java\com\endava\patterns\utils\Constants.java
