@@ -15,19 +15,6 @@ public class EmployeeBuilder
     public EmployeeBuilder(String name){
         this.name = name;
     }
-
-//    public EmployeeBuilder(int cc, String name, String lastName, String phone, String address, int salary, int subDiscipline, String grade, String seniority) {
-//        this.cc = cc;
-//        this.name = name;
-//        this.lastName = lastName;
-//        this.phone = phone;
-//        this.address = address;
-//        this.salary = salary;
-//        this.subDiscipline = subDiscipline;
-//        this.grade = grade;
-//        this.seniority = seniority;
-//    }
-
     public EmployeeBuilder addCc(int cc) {
         this.cc = cc;
         return this;
