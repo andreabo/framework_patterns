@@ -12,3 +12,9 @@ Feature: Request employees
     Given There is an "automation tester"
     When I request for all employees
     Then I should get a tester employee
+
+
+  Scenario: Create a tester
+    Given There is valid data
+    When I request to create a "tester"
+    Then The system should create the employee

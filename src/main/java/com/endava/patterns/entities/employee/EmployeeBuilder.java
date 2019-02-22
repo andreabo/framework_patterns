@@ -1,9 +1,7 @@
 package com.endava.patterns.entities.employee;
 
-import java.util.Random;
-
-public class EmployeeBuilder {
-    private int id;
+public class EmployeeBuilder
+{
     private int cc;
     private String name;
     private String lastName;
@@ -14,20 +12,64 @@ public class EmployeeBuilder {
     private String grade;
     private String seniority;
 
-    public EmployeeBuilder setSubDiscipline(int subDiscipline) {
+    public EmployeeBuilder(String name){
+        this.name = name;
+    }
+
+//    public EmployeeBuilder(int cc, String name, String lastName, String phone, String address, int salary, int subDiscipline, String grade, String seniority) {
+//        this.cc = cc;
+//        this.name = name;
+//        this.lastName = lastName;
+//        this.phone = phone;
+//        this.address = address;
+//        this.salary = salary;
+//        this.subDiscipline = subDiscipline;
+//        this.grade = grade;
+//        this.seniority = seniority;
+//    }
+
+    public EmployeeBuilder addCc(int cc) {
+        this.cc = cc;
+        return this;
+    }
+
+    public EmployeeBuilder addLastName(String lastName) {
+        this.lastName = lastName;
+        return this;
+    }
+
+    public EmployeeBuilder addPhone(String phone) {
+        this.phone = phone;
+        return this;
+    }
+
+    public EmployeeBuilder addAddress(String address) {
+        this.address = address;
+        return this;
+    }
+
+    public EmployeeBuilder addSalary(int salary) {
+        this.salary = salary;
+        return this;
+    }
+
+    public EmployeeBuilder addSubDiscipline(int subDiscipline) {
         this.subDiscipline = subDiscipline;
         return this;
     }
 
-    public Employee build() {
-        id = new Random().nextInt() % 10000 + 1000;
-        cc = new Random().nextInt() % 10000 + 1000;
-        name = "";
-        lastName = "";
-        phone = "";
-        address = "";
-        grade = "";
-        seniority = "";
-        return new Employee(id, cc, name, lastName, phone, address, salary, subDiscipline, grade, seniority);
+    public EmployeeBuilder addGrade(String grade) {
+        this.grade = grade;
+        return this;
     }
+
+    public EmployeeBuilder addSeniority(String seniority) {
+        this.seniority = seniority;
+        return this;
+    }
+
+    public Employee build() {
+        return new Employee(cc, name, lastName, phone, address, salary, subDiscipline, grade, seniority);
+    }
+
 }
