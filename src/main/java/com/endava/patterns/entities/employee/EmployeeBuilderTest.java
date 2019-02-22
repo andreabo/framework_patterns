@@ -20,7 +20,7 @@ public class EmployeeBuilderTest {
     }
 
     public Employee build() {
-        id = new Random().nextInt() % 10000 + 1000;
+        id = new Random().nextInt() % 999 + 900;
         cc = new Random().nextInt() % 10000 + 1000;
         name = "";
         lastName = "";
@@ -28,8 +28,6 @@ public class EmployeeBuilderTest {
         address = "";
         grade = "";
         seniority = "";
-        return new Employee(cc, name, lastName, phone, address, salary, subDiscipline, grade, seniority);
+        return new Employee(id, cc, name, lastName, phone, address, salary, subDiscipline, grade, seniority);
     }
-
-
 }

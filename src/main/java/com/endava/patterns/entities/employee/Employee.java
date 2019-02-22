@@ -59,7 +59,8 @@ public class Employee {
         return seniority;
     }
 
-    public Employee(int cc, String name, String lastName, String phone, String address, int salary, int subDiscipline, String grade, String seniority) {
+    public Employee(int id, int cc, String name, String lastName, String phone, String address, int salary, int subDiscipline, String grade, String seniority) {
+        this.id = id;
         this.cc = cc;
         this.name = name;
         this.lastName = lastName;

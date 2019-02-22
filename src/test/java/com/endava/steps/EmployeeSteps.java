@@ -49,21 +49,21 @@ public class EmployeeSteps {
     public void iShouldGetATesterEmployee() {
         Optional optional;
         Object employeesObject = Session.getInstance().getFromMap("employees");
-//        Employee[] employees = EmployeeMapper.getInstance().mapObjectToEmployees(employeesObject);
-//        optional = Arrays.stream(employees)
-//                .filter(item -> item.getSubDiscipline() == AUTOMATION_SUBDISCIPLINE)
-//                .findFirst();
-//        assertThat(optional.isPresent(), is(true));
+        Employee[] employees = EmployeeMapper.getInstance().mapObjectToEmployees(employeesObject);
+        optional = Arrays.stream(employees)
+                .filter(item -> item.getSubDiscipline() == AUTOMATION_SUBDISCIPLINE)
+                .findFirst();
+        assertThat(optional.isPresent(), is(true));
     }
 
     @Given("^There is valid data$")
     public void thereIsValidData() {
-        System.out.println("Bla bla bla");
     }
 
-    @When("^I request to create a \"([^\"]*)\"$")
-    public void iRequestToCreateA(String arg0) throws Throwable {
-        Employee tester = Employee.addName("andrea").addLastName("bohorquez").addAddress("Calle 123").addCc(123456).addPhone("7417474").addSalary(1000000).addGrade("EN").addSeniority("Senior Tester").addSubDiscipline(1).build();
-        System.out.println(tester.getName());
+    @When("^I request to create an \"([^\"]*)\"$")
+    public void iRequestToCreateAn(String type) {
+        Employee employee = EmployeeFactory.getEmployee(type);
+        // Employee tester = Employee.addName("andrea").addLastName("bohorquez").addAddress("Calle 123").addCc(123456).addPhone("7417474").addSalary(1000000).addGrade("EN").addSeniority("Senior Tester").addSubDiscipline(5).build();
+        HttpRequest.getInstance().postFromUri(employeeUri, employee);
     }
 }

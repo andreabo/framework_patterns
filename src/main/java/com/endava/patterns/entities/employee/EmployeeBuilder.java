@@ -1,7 +1,8 @@
 package com.endava.patterns.entities.employee;
 
-public class EmployeeBuilder
-{
+import java.util.Random;
+
+public class EmployeeBuilder {
     private int cc;
     private String name;
     private String lastName;
@@ -11,10 +12,13 @@ public class EmployeeBuilder
     private int subDiscipline;
     private String grade;
     private String seniority;
+    private int id;
 
-    public EmployeeBuilder(String name){
+    public EmployeeBuilder(String name) {
+        this.id = new Random().nextInt() % 999 + 999;
         this.name = name;
     }
+
     public EmployeeBuilder addCc(int cc) {
         this.cc = cc;
         return this;
@@ -56,7 +60,6 @@ public class EmployeeBuilder
     }
 
     public Employee build() {
-        return new Employee(cc, name, lastName, phone, address, salary, subDiscipline, grade, seniority);
+        return new Employee(id, cc, name, lastName, phone, address, salary, subDiscipline, grade, seniority);
     }
-
 }
